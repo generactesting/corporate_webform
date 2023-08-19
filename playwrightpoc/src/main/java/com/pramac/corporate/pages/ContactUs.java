@@ -32,7 +32,6 @@ public class ContactUs {
 	
 	
 	
-	
 	public ContactUs(Page page) {
 		this.page = page;
 	}
@@ -51,7 +50,7 @@ public class ContactUs {
 		page.fill(this.company, company);
 		page.fill(this.jobTitle, jobTitle);
 		page.fill(this.email, email);
-		page.selectOption(this.phoneCode, phoneCode);
+		//page.selectOption(this.phoneCode, phoneCode);
 		page.fill(this.phone, phone);
 		page.fill(this.street, street);
 		page.fill(this.city, city);

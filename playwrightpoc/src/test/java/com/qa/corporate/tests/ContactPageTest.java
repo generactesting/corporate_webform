@@ -18,7 +18,7 @@ import com.qa.corporate.base.BaseTest;
 public class ContactPageTest extends BaseTest {
 
 @Test	
-public void testContactUsPage() throws IOException {		
+public void testContactUsPage() throws IOException, InterruptedException {		
 		
 	boolean messageIsVisible = true;
 	FileInputStream fis = new FileInputStream("./TestData/Pramac_Corporate_Testdata.xlsx");
@@ -37,12 +37,12 @@ public void testContactUsPage() throws IOException {
         System.out.println("jobTitle: "+jobTitle);
         String email = row.getCell(4).getStringCellValue();
         System.out.println("email: "+email);
-        //Object phoneCode1=formatter.formatCellValue(row.getCell(5));
-        //String phoneCode=(String) phoneCode1;
-        //System.out.println("phoneCode: "+phoneCode);
+        Object phoneCode1=formatter.formatCellValue(row.getCell(5));
+        String phoneCode=(String) phoneCode1;
+        System.out.println("phoneCode: "+phoneCode);
         Object phone1=formatter.formatCellValue(row.getCell(6));
         String phone=(String) phone1;
-        System.out.println("phoneCode: "+phone1);
+        System.out.println("phone: "+phone1);
         Object street1=formatter.formatCellValue(row.getCell(7));
         String street=(String) street1;
         System.out.println("street: "+street);       
@@ -80,7 +80,7 @@ public void testContactUsPage() throws IOException {
     	String transferOfPersonalData=(String) transferOfPersonalData1;
     	//String transferOfPersonalData = row.getCell(17).getStringCellValue();
 	    
-        contactPage.submitCustomerDetails(firstName, lastName, company, jobTitle, email, phone, street, city, country, state, zipcode, areYouDealer, howCanWeHelp, yourMessage, readPrivacyNotice, myConsentTo, transferOfPersonalData);
+        contactPage.submitCustomerDetails(firstName, lastName, company, jobTitle, email, phoneCode, phone, street, city, country, state, zipcode, areYouDealer, howCanWeHelp, yourMessage, readPrivacyNotice, myConsentTo, transferOfPersonalData);
         //contactPage.submitCustomerDetails(firstName, lastName, company, jobTitle, email, phoneCode, phone, street, city, country, state, zipcode, areYouDealer, howCanWeHelp, yourMessage, readPrivacyNotice, myConsentTo, transferOfPersonalData);
         //contactPage.submitCustomerDetails("Mark", "AutoTest", "MaxWell Company", "Finance Manager", "mark@maxwell.com", "34534516781", "Srteet01", "City01", "United Kingdom", "Antrim", "A1 B2", "Yes", "General Enquiry", "To Test ISO Codes", "I agree", "No", "Yes");
 		

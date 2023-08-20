@@ -12,7 +12,8 @@ public class ContactUs {
 	private String company="input[name='your-company']";
 	private String jobTitle="input[name='title']";
 	private String email="input[name='your-email']";
-	private String phoneCode="input[name='your-tel']";
+	private String phoneCodeDrp="//div[@class='flag-container']";
+	private String phoneCode="//div[@class='flag-container']//ul/li//span";
 	private String phone="input[name='your-tel']";
 	private String street="input[name='street']";
 	private String city="input[name='city']";
@@ -42,21 +43,25 @@ public class ContactUs {
 	
 	
 	public void submitCustomerDetails(String firstName, String lastName, String company, String jobTitle, 
-			String email, String phone, String street, String city, String country, String state, 
+			String email, String phoneCode, String phone, String street, String city, String country, String state, 
 			String zipcode, String areYouDealer, String howCanWeHelp, String yourMessage, 
-			String readPrivacyNotice, String myConsentTo, String transferOfPersonalData) {
+			String readPrivacyNotice, String myConsentTo, String transferOfPersonalData) throws InterruptedException {
+		page.waitForLoadState();
 		page.fill(this.firstName, firstName);
 		page.fill(this.lastName, lastName);
 		page.fill(this.company, company);
 		page.fill(this.jobTitle, jobTitle);
 		page.fill(this.email, email);
-		//page.selectOption(this.phoneCode, phoneCode);
+		page.click(phoneCodeDrp);	
+		//Thread.sleep(4000);
+		page.locator(this.phoneCode, new Page.LocatorOptions().setHasText(phoneCode)).first().click();
+		page.waitForLoadState();
 		page.fill(this.phone, phone);
 		page.fill(this.street, street);
 		page.fill(this.city, city);
 		page.locator("#ui-id-3").selectOption("No");
-
 		page.selectOption(this.country, country);
+		page.waitForLoadState();
 		page.selectOption(this.state, state);
 		page.fill(this.zipcode, zipcode);
 		page.locator(this.areYouDealer).selectOption(areYouDealer);
@@ -67,6 +72,7 @@ public class ContactUs {
 		page.getByText("Yes").nth(3).click();
 		page.click(sendButton);		
 	}
+	
 	
 	
 

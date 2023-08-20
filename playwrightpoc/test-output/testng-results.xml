@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-19T13:54:55 GMT-05:00" name="Default suite" finished-at="2023-08-19T14:02:51 GMT-05:00" duration-ms="476010">
+  <suite started-at="2023-08-20T12:55:11 GMT-05:00" name="Default suite" finished-at="2023-08-20T12:58:04 GMT-05:00" duration-ms="172308">
     <groups>
     </groups>
-    <test started-at="2023-08-19T13:54:55 GMT-05:00" name="Default test" finished-at="2023-08-19T14:02:51 GMT-05:00" duration-ms="476010">
+    <test started-at="2023-08-20T12:55:11 GMT-05:00" name="Default test" finished-at="2023-08-20T12:58:04 GMT-05:00" duration-ms="172308">
       <class name="com.qa.corporate.tests.ContactPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@6c64cb25]" started-at="2023-08-19T13:54:55 GMT-05:00" name="setup" finished-at="2023-08-19T13:56:01 GMT-05:00" duration-ms="65263" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@52bf72b5]" started-at="2023-08-20T12:55:11 GMT-05:00" name="setup" finished-at="2023-08-20T12:55:54 GMT-05:00" duration-ms="42187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testContactUsPage()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@6c64cb25]" started-at="2023-08-19T13:56:01 GMT-05:00" name="testContactUsPage" finished-at="2023-08-19T14:02:48 GMT-05:00" duration-ms="406931" status="PASS">
+        <test-method signature="testContactUsPage()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@52bf72b5]" started-at="2023-08-20T12:55:54 GMT-05:00" name="testContactUsPage" finished-at="2023-08-20T12:58:02 GMT-05:00" duration-ms="128751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testContactUsPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@6c64cb25]" started-at="2023-08-19T14:02:48 GMT-05:00" name="tearDown" finished-at="2023-08-19T14:02:51 GMT-05:00" duration-ms="3629" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.corporate.tests.ContactPageTest@52bf72b5]" started-at="2023-08-20T12:58:03 GMT-05:00" name="tearDown" finished-at="2023-08-20T12:58:04 GMT-05:00" duration-ms="1075" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
